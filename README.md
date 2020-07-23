@@ -3,7 +3,7 @@ Docker compose symfony5 app skeleton
 
 In order to start containers run:
 ```
-`docker-compose up -d`
+docker-compose up -d
 ```
 
 For connecting to `php` container command prompt run: 
