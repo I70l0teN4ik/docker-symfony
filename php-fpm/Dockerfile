@@ -1,6 +1,6 @@
 FROM php:8.1-fpm
 
-RUN apt-get update && apt-get install -y openssl git zip unzip
+RUN apt-get update && apt-get install -y openssl git zip unzip autoconf g++ make zlib1g-dev libmemcached-dev
 
 # Install Composer
 ENV COMPOSER_ALLOW_SUPERUSER=1
@@ -17,7 +17,7 @@ RUN docker-php-ext-install pdo pdo_mysql bcmath sockets opcache
 COPY php-fpm.d/* /usr/local/etc/php-fpm.d/
 COPY conf.d/* /usr/local/etc/php/conf.d/
 # install xdebug
-RUN pecl install xdebug && docker-php-ext-enable xdebug
+RUN pecl install memcached xdebug && docker-php-ext-enable xdebug memcached
 
 RUN echo 'alias sf=/var/www/symfony/bin/console' >> ~/.bashrc
 
