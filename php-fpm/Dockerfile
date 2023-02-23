@@ -17,7 +17,7 @@ RUN docker-php-ext-install pdo pdo_mysql bcmath sockets opcache
 COPY php-fpm.d/* /usr/local/etc/php-fpm.d/
 COPY conf.d/* /usr/local/etc/php/conf.d/
 # install xdebug
-RUN pecl install memcached xdebug && docker-php-ext-enable xdebug memcached
+RUN pecl install intl redis memcached xdebug && docker-php-ext-enable intl redis memcached xdebug
 
 RUN echo 'alias sf=/var/www/symfony/bin/console' >> ~/.bashrc
 

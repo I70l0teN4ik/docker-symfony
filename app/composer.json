@@ -5,23 +5,32 @@
     "php": "^8.1",
     "ext-ctype": "*",
     "ext-iconv": "*",
+    "doctrine/doctrine-bundle": "^2.8",
+    "doctrine/doctrine-migrations-bundle": "^3.2",
+    "doctrine/orm": "^2.14",
     "symfony/console": "*",
     "symfony/dotenv": "*",
     "symfony/flex": "*",
     "symfony/framework-bundle": "*",
-    "symfony/orm-pack": "*",
     "symfony/property-access": "*",
+    "symfony/runtime": "6.*",
     "symfony/yaml": "*"
   },
   "require-dev": {
     "symfony/maker-bundle": "*",
-    "symfony/profiler-pack": "^*"
+    "symfony/phpunit-bridge": "*",
+    "symfony/stopwatch": "6.*",
+    "symfony/web-profiler-bundle": "6.*"
   },
   "config": {
     "preferred-install": {
       "*": "dist"
     },
-    "sort-packages": true
+    "sort-packages": true,
+    "allow-plugins": {
+      "symfony/flex": true,
+      "symfony/runtime": true
+    }
   },
   "autoload": {
     "psr-4": {

@@ -1,5 +1,5 @@
-# docker-symfony5
-Docker compose symfony5 app skeleton
+# symfony-docker-compose
+Symfony app skeleton baked with docker-compose
 
 In order to start containers run:
 ```
